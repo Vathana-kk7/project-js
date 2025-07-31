@@ -35,11 +35,15 @@
                         <i class="fas fa-heart"></i>
                         <span class="badge" id="wishlistCount">0</span>
                     </button>
+
                     
+
                     <button class="action-btn" id="cartBtn">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="badge" id="cartCount">0</span>
                     </button>
+
+
                     
                     <button class="action-btn" id="userBtn">
                         <i class="fas fa-user"></i>
@@ -95,14 +99,24 @@
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
     <!-- Products Section -->
-    <section class="products-section" id="products">
-        <div class="container">
+    <section class="products-section" id="products-section" >
+        <div class="container" id="products-container">
             <h2>Featured Products</h2>
             
             <!-- Filters and Controls -->
-            <div class="products-controls">
-                <div class="filters">
+            <div class="products-controls" id="products-controls">
+                <div class="filters" id="filters">
                     <div class="filter-group">
                         <label>Category:</label>
                         <select id="categoryFilter">
@@ -114,7 +128,7 @@
                         </select>
                     </div>
                     
-                    <div class="filter-group">
+                    <div class="filter-group" id="filter-group">
                         <label>Price Range:</label>
                         <div class="price-range">
                             <input type="range" id="priceRange" min="0" max="1500" value="1500">
@@ -122,15 +136,15 @@
                         </div>
                     </div>
                     
-                    <div class="filter-group">
+                    <div class="filter-group" >
                         <label>
                             <input type="checkbox" id="inStockOnly"> In Stock Only
                         </label>
                     </div>
                 </div>
                 
-                <div class="controls">
-                    <select id="sortBy">
+                <div class="controls" id="controls">
+                    <select id="sortBy" >
                         <option value="name">Sort by Name</option>
                         <option value="price-low">Price: Low to High</option>
                         <option value="price-high">Price: High to Low</option>
@@ -141,8 +155,8 @@
                         <button class="view-btn active" data-view="grid">
                             <i class="fas fa-th"></i>
                         </button>
-                        <button class="view-btn" data-view="list">
-                            <i class="fas fa-list"></i>
+                             <button class="view-btn" data-view="list">
+                            <i class="fas fa-list">  </i>
                         </button>
                     </div>
                 </div>
@@ -151,10 +165,24 @@
             <!-- Products Grid -->
             <div class="products-grid" id="productsGrid">
                 <!-- Products will be dynamically loaded here -->
+                 
             </div>
+            
         </div>
     </section>
+    
+    
+    
+    
+    
+    
+    
+    
 
+    
+    
+    
+    
     <!-- Shopping Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
@@ -361,6 +389,6 @@
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
 
-    <script src="script.js"></script>
+    <script src="script1.js" type="module"></script>
 </body>
 </html>
