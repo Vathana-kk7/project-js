@@ -125,6 +125,7 @@ window.addtocart = (id) => {
     localStorage.setItem("carts", JSON.stringify(carts));
   }
   showcarts(carts);
+  updateCartCount();
 };
 
 window.increaseQTY = (id) => {
@@ -178,7 +179,14 @@ const calculateAll = () => {
   shopping.textContent = `${totalamount.toFixed(2)}`;
   total.textContent= `${totalamount.toFixed(2)}`;
 };
+
+const updateCartCount = () => {
+  const cartCountBadge = document.getElementById("cartCount");
+  cartCountBadge.textContent = carts.length;
+};
+
 calculateAll();
+updateCartCount();
 const checkoutForm = document.getElementById("checkoutForm");
 
 checkoutForm.addEventListener("submit", (e) => {
